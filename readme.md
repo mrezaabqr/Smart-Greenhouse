@@ -3,7 +3,7 @@ This repository contains an implementation of an IoT project that measures envir
 
 This repo also includes Arduino code for client/server and source code of the web interface.
 
-![diagram](images/arch.png)
+![diagram](images/architecture.png)
 ![hardware](images/hardware.png)
 
 ## COM Port
