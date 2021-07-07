@@ -34,12 +34,13 @@ textPosition_t scrollAlign = PA_LEFT;
 uint16_t scrollPause = 0; // in milliseconds
 
 // Global message buffers shared by Serial and Scrolling functions
-#define  BUF_SIZE  75
+#define  BUF_SIZE  300
 char curMessage[BUF_SIZE] = { "" };
 bool newMessageAvailable = true;
 
-//Global ...
-char data[2] ;
+// Global ...
+#define  DATE_FRAME  192
+char data[DATE_FRAME] = { "YYYY-MM-DD 2003-04-02" };
 
 void setup() {
   dht.begin();
@@ -48,7 +49,6 @@ void setup() {
   P.begin();
   P.displayText(curMessage, scrollAlign, scrollSpeed, scrollPause, scrollEffect, scrollEffect);
 }
-
 
 void loop() {
   float h = dht.readHumidity();        // read humidity
@@ -64,17 +64,14 @@ void loop() {
     {
       char newMessage[BUF_SIZE] = { "T: , H: , L: " };
 
-
-      int Hour = 23, Minute = 32, Second = 43, Year = 2021, Month = 11, Day = 30;
+      // int Hour = 23, Minute = 32, Second = 43, Year = 2021, Month = 11, Day = 30;
       String message =  String(
                           "T: " + String(t, 0) + \
                           ", H: " + String(h, 0) + \
                           ", L: " + String(LDR_Value) + \
-                          "Time: " + String(data)
+                          ", Time: " + String(data)
                         );
-//      String message = String(
-//                         data
-//                       );
+
       message.toCharArray(newMessage, BUF_SIZE);
       strcpy(curMessage, newMessage);
       newMessageAvailable = true;
