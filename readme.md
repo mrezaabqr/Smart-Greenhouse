@@ -6,6 +6,11 @@ This repo also includes Arduino code for client/server and source code of the we
 ![diagram](images/arch.PNG)
 ![hardware](images/hardware.png)
 
+# COM Port
+Wifi module is not available in Proteus currently, so we decided to use a virtual COM port to make a connection between microcontroller and server.
+![diagram](images/wifi_subs.png)
+
+
 ## Getting Started
 
 1. Install [Serial to Ethernet Connector](https://dl.downloadly.ir/Files/Software2/Eltima_Software_Serial_to_Ethernet_Connector_7.1.876_Downloadly.ir.rar)
