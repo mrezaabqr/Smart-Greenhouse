@@ -3,11 +3,11 @@ This repository contains an implementation of an IoT project that measures envir
 
 This repo also includes Arduino code for client/server and source code of the web interface.
 
-![diagram](images/arch.PNG)
+![diagram](images/arch.png)
 ![hardware](images/hardware.png)
 
-# COM Port
-Wifi module is not available in Proteus currently, so we decided to use a virtual COM port to make a connection between microcontroller and server.
+## COM Port
+Wifi module is not available in Proteus, so we decided to use a virtual COM port to make a connection between microcontroller and server.
 ![diagram](images/wifi_subs.png)
 
 
